@@ -1,0 +1,165 @@
+.site-header
+	width: 100%
+	height: 50vh
+	position: relative
+	background: url("../images/cover.png")
+	background-size: 100% 100%
+	background-position: top left
+	position: relative
+	margin-bottom: 75px
+	@media all and (max-width: 600px)
+		margin-bottom: 210px
+		height: 65vh
+	.top-bar
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		background: #ffffff
+		padding: 10px
+		+clearFloat
+		ul
+			float: right
+			li
+				list-style: none
+				display: inline-block
+				a
+					color: #1c222c
+					text-decoration: none
+					display: block
+					padding: 7px
+					transition: all 300ms
+					&:hover
+						background: #1c222c
+						color: #ffffff
+						border-radius: 4px
+	.head-line
+		position: absolute
+		background: #1c222c
+		color: #ffffff
+		font-family: $heading
+		font-size: 5vw
+		cursor: default
+		user-select: none
+		+pCenter
+		top: 60%
+	.profile
+		position: absolute
+		top: 100%
+		left: 20px
+		transform: translate(0, -50%)
+		@media all and (max-width: 650px)
+			top: 100%
+			left: 50%
+			transform: translate(-50%, -32%)
+		img
+			width: 150px
+			height: auto
+			border: 5px solid #ffffff
+			border-radius: 4px
+			position: absolute
+			display: block
+			+vCenter
+			@media all and (max-width: 650px)
+				+clearVCenter
+				margin: 0 auto
+		div
+			font-family: $heading
+			left: 150px
+			white-space: nowrap
+			+vCenter
+			top: calc(50% + 8px)
+			@media all and (max-width: 650px)
+				+clearVCenter
+				left: 0
+			h1, h2, h3
+				padding: 0 10px 0 10px
+			h1
+				color: #ffffff
+				background: #1c222c
+				font-size: 30px
+				@media all and (max-width: 650px)
+					padding: 7px
+					margin-top: 10px
+					font-size: x-large
+					text-align: center
+			h2
+				font-size: 26px
+				@media all and (max-width: 650px)
+					padding: 7px
+					font-size: x-larger
+					text-align: center
+			h3
+				font-size: 22px
+				@media all and (max-width: 650px)
+					padding: 7px
+					font-size: larger
+					max-width: 80vw
+					white-space: pre-wrap
+					text-align: center
+	
+	.social-media
+		position: absolute
+		bottom: 0
+		right: 20px
+		background: #1c222c
+		@media all and (max-width: 650px)
+			right: auto
+			bottom: auto
+			top: 30%
+			width: 100%
+			text-align: center
+			background: transparent
+.site-header, .top-bar-special
+	.social-media-sidebar, .social-media
+		a
+			transition: all 300ms
+			color: #ffffff
+			font-size: 40px
+			display: inline-block
+			margin-left: 7px
+			position: relative
+			bottom: 0
+			transition: all 300ms
+			padding: 0
+	.social-media-sidebar
+		a
+			&:after
+				content: ''
+				position: absolute
+				right: 5px
+				top: 0
+				left: 0
+				height: 0
+				width: 2px
+				background: #ffffff
+				transition: all 300ms
+				visibility: hidden
+				+vCenter
+			&:hover
+				padding-left: 10px
+				&:after
+					height: 100%
+					visibility: visible
+	.social-media
+		a
+			&:after
+				content: ''
+				position: absolute
+				bottom: -5px
+				display: block
+				width: 0
+				height: 2px
+				background: #ffffff
+				transition: width 300ms
+				visibility: hidden
+				+hCenter
+				@media all and (max-width: 650px)
+					display: none
+			&:hover
+				bottom: 10px
+				@media all and (max-width: 650px)
+					bottom: auto
+				&:after
+					width: 100%
+					visibility: visible

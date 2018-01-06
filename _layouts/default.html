@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+	{% include header.html %}
+	{{ content }}
+	{% include footer.html %}
+	<script>
+		(function() {
+			var topbarSpecial = document.querySelector('.top-bar-special');
+			var sidebar = {
+				element: document.querySelector('.sidebar')
+			};
+
+			document.querySelector('.close-btn').onclick = function() {
+				sidebar.element.setAttribute('class', 'sidebar hidden');
+				document.body.style.overflow = 'auto';
+			}
+
+			document.querySelector('.bars').onclick = function() {
+				sidebar.element.setAttribute('class', 'sidebar shown');
+				document.body.style.overflow = 'hidden';
+			}
+
+			window.onscroll = function() {
+				var header = document.querySelector('header');
+
+				if (header) {
+					header = header.clientHeight;
+					var topbarSpecial = {
+						element: document.querySelector('.top-bar-special'),
+						shown: false
+					};
+
+					if (window.pageYOffset > header && !topbarSpecial.shown) {
+						topbarSpecial.element.setAttribute('class', 'top-bar-special shown');
+						topbarSpecial.shown = true;
+					} else {
+						topbarSpecial.element.setAttribute('class', 'top-bar-special hidden');
+						topbarSpecial.shown = false;
+					}
+				}
+			}
+		})();
+	</script>
+</body>
+</html>

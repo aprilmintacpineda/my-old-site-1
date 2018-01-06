@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+<div class="home">
+	<article>
+		<div class="image">
+			<img src="images/devices.png">
+		</div>
+		<div class="paragraph">
+			<div class="text">
+				<h1>Skills</h1>
+				<p class="text-default">My years of experience and numerous experiments in software development has given me the ability to analyze business needs, collect data, define application specifications that meet the business needs, and create a computerized system, with solid architecture and design, from scratch, that automates the business processes. I can take full responsiblity on the project's development from 0% to 100% progress, ensure that the deliverables are delivered on the promised date, develop a well-detailed documentation containing the diagrams (<strong>database diagram</strong>, <strong>dataflow diagram</strong>, and <strong>business flow diagram</strong>.), technologies used, <strong>gantt chart</strong>, and <strong>user manual</strong>.</p>
+				<p><strong>Web application development</strong> ~ HTML5, CSS3 / SASS (with auto-prefixer using postcss), JavaScript / EcmaScript 2017 (with webpack and babel), <a class="a-default" href="https://github.com/facebook/react" target="_blank">ReactJS</a> (with <a class="a-default" href="https://github.com/reactjs/react-redux" target="_blank">redux</a>, <a class="a-default" href="https://github.com/ReactTraining/react-router" target="_blank">router</a>, and <a class="a-default" href="https://github.com/redux-saga/redux-saga" target="_blank">saga</a>) for the front-end and PHP7, MySQL / SQLite, and <a class="a-default" href="https://laravel.com/docs/5.5" target="_blank">Laravel 5.5</a> for the back-end.</p>
+				<p><strong>Desktop application development</strong> ~ <a class="a-default" href="https://github.com/electron/electron" target="_new">ElectronJS</a> is powerful and allows me to create cross-platform applications with MySQL / SQLite either locally or remotely. I can integrate it with <a class="a-default" href="https://github.com/facebook/react" target="_blank">ReactJS</a> (with <a class="a-default" href="https://github.com/reactjs/react-redux" target="_blank">redux</a>, <a class="a-default" href="https://github.com/ReactTraining/react-router" target="_blank">router</a>, and <a class="a-default" href="https://github.com/redux-saga/redux-saga" target="_blank">saga</a>).</p>
+				<p><strong>Quality Assurance</strong> ~ I do end-to-end testing to ensure that the software is perfect from top to bottom. I create automated unit tests. <a class="a-default" href="https://www.youtube.com/watch?v=Y7Wg4508tHo" target="_blank">WhiteBox and BlackBox testing</a>. Simple Penetration testing with CSRF, XSS, and BruteForce attacks.</p>
+			</div>
+		</div>
+	</article>
+	<article>
+		<div class="image">
+			<img class="small" src="images/autodidactism.png">
+		</div>
+		<div class="paragraph">
+			<div class="text">
+				<h1>Self-Education (autodidactism)</h1>
+				<p class="text-default">I believe that the most affordable and best education is still self education, and the best teacher is still yourself, your experience, your instinct, and the community itself.</p>
+				<p class="text-default">I watch video tutorials and tech talks about programming, software development, devOps, quality assurance, career development, personality development, etc. on youtube, linkedin and everywhere else in the internet. I enroll on online courses in different websites likes udemy, codecourse, etc. I read blog posts about programming, software development, best practices, etc. I have learned more with this habbit than anywhere else so far.</p>
+				<p class="text-default">I've been doing this since 2015. I simply utilize whatever resources I have and I can get to learn as much as I need.</p>
+			</div>
+		</div>
+	</article>
+	<article>
+		<div class="image">
+			<img class="smaller" src="images/youtube.png">
+		</div>
+		<div class="paragraph">
+			<div class="text">
+				<h1>I'm a YouTuber</h1>
+				<p class="text-default">I post videos about the things I am interested about.</p>
+				<div class="occupy-space">
+					<iframe src="https://www.youtube-nocookie.com/embed/NnaEpB0vrgA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</article>
+	<article>
+		<div class="image">
+			<img class="smaller" src="images/location.png">
+		</div>
+		<div class="paragraph">
+			<div class="text">
+				<h1>I'm a Filipino</h1>
+				<div class="map occupy-space"></div>
+			</div>
+		</div>
+	</article>
+	<script>
+		function initMap() {
+			var Philippines = {lat: 12.3787341, lng: 123.7062059};
+			var map = new google.maps.Map(document.querySelector('.map'), {
+				zoom: 5,
+				center: Philippines
+			});
+		}
+
+		window.onresize = function(ev) {
+			initMap();
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuP81R2Xhlc4e4WLfu2amgBneP4nsQS28&callback=initMap" async defer></script>
+</div>

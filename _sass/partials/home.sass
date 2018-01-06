@@ -1,0 +1,72 @@
+.home
+	article
+		padding: 10vh 0
+		h1.section-title
+			font-family: $heading
+			font-size: 30px
+			margin-bottom: 8px
+		.image
+			display: table-cell
+			vertical-align: middle
+			text-align: center
+			padding: 20px
+			width: 40vw
+			min-height: 400px
+			@media all and (max-width: 650px)
+				display: block
+				min-height: 0
+				width: calc(100vw - (100vw - 100%))
+			img
+				width: 100%
+				height: auto
+				max-width: 300px
+				@media all and (max-width: 650px)
+					display: block
+					margin: 0 auto
+					width: 100%
+			img.small
+				@media all and (max-width: 650px)
+					display: block
+					margin: 0 auto
+					width: 80%
+			img.smaller
+				@media all and (max-width: 650px)
+					display: block
+					margin: 0 auto
+					width: 50%
+		.paragraph
+			display: table-cell
+			vertical-align: middle
+			width: 60vw
+			min-height: 400px
+			@media all and (max-width: 650px)
+				display: block
+				width: calc(100vw - (100vw - 100%))
+				min-height: 0
+			.text
+				display: block
+				padding: 20px
+				.occupy-space
+					position: relative
+					width: 100%
+					height: 100%
+					display: block
+					&:after
+						content: ''
+						display: block
+						padding-top: 50%
+						@media all and (max-width: 650px)
+							padding-top: 80%
+				iframe
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+			h1
+				font-family: $heading
+				font-size: 30px
+				margin-bottom: 8px
+			p
+				font-family: $contents
+				+flexiMarginBottom(8px)

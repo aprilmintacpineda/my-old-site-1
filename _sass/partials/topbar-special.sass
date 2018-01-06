@@ -1,0 +1,88 @@
+.top-bar-special.hidden
+	top: -100px
+.top-bar-special.shown
+	top: 0
+.top-bar-special
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	z-index: 100
+	background: #1c222c
+	padding: 20px
+	+clearFloat
+	transition: all 300ms
+	.non-mobile
+		@media all and (max-width: 650px)
+			display: none
+	a
+		text-decoration: none
+		color: #ffffff
+	a.bars
+		display: block
+		float: right
+		@media all and (min-width: 650px)
+			display: none
+	img
+		width: 50px
+		height: auto
+		float: left
+		border: 3px solid #ffffff
+		border-radius: 4px
+		margin-right: 7px
+	div.social-media
+		+pCenter
+		a
+			display: inline-block
+			font-size: 40px
+			+flexiMarginRight(5px)
+	ul.nav-menu
+		float: right
+		+vCenter
+		right: 20px
+		li
+			display: inline-block
+			a
+				display: block
+				padding: 7px
+				transition: all 300ms
+				border-radius: 4px
+				&:hover
+					color: #1c222c
+					background: #ffffff
+	.sidebar.hidden
+		left: -100%
+	.sidebar.shown
+		left: 0
+	.sidebar
+		position: fixed
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background: #1c222c
+		transition: all 300ms
+		+clearFloat
+		@media all and (min-width: 650px)
+			display: none
+		.close
+			+clearFloat
+			padding: 20px
+			a
+				float: right
+		ul.social-media-sidebar
+			position: absolute
+			left: 20px
+			list-style: none
+			+vCenter
+			li a
+				font-size: 40px
+		ul.nav-menu-sidebar
+			position: absolute
+			right: 20px
+			list-style: none
+			li
+				+flexiMarginBottom(10px)
+				a
+					padding: 7px
+					display: block
